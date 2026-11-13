@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name:       72HW Showcase
- * Plugin URI:        https://github.com/72hourwebsites/72hw-showcase
+ * Plugin Name:       Project Portfolio Grid
+ * Plugin URI:        https://github.com/72hourwebsites/project-portfolio-grid
  * Description:       A small portfolio custom post type with an accessible shortcode grid.
- * Version:           1.0.1
+ * Version:           1.1.0
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Author:            Angel Lopez
  * Author URI:        https://github.com/72hourwebsites
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       72hw-showcase
+ * Text Domain:       project-portfolio-grid
  *
  * @package HW72_Showcase
  */
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HW72_SHOWCASE_VERSION', '1.0.1' );
+define( 'HW72_SHOWCASE_VERSION', '1.1.0' );
 define( 'HW72_SHOWCASE_URL', plugin_dir_url( __FILE__ ) );
 
 /**
@@ -27,16 +27,16 @@ define( 'HW72_SHOWCASE_URL', plugin_dir_url( __FILE__ ) );
  */
 function hw72_showcase_register_post_type() {
 	$labels = array(
-		'name'               => _x( 'Showcase Items', 'post type general name', '72hw-showcase' ),
-		'singular_name'      => _x( 'Showcase Item', 'post type singular name', '72hw-showcase' ),
-		'add_new_item'       => __( 'Add New Showcase Item', '72hw-showcase' ),
-		'edit_item'          => __( 'Edit Showcase Item', '72hw-showcase' ),
-		'new_item'           => __( 'New Showcase Item', '72hw-showcase' ),
-		'view_item'          => __( 'View Showcase Item', '72hw-showcase' ),
-		'search_items'       => __( 'Search Showcase Items', '72hw-showcase' ),
-		'not_found'          => __( 'No showcase items found.', '72hw-showcase' ),
-		'not_found_in_trash' => __( 'No showcase items found in Trash.', '72hw-showcase' ),
-		'menu_name'          => _x( 'Showcase', 'admin menu', '72hw-showcase' ),
+		'name'               => _x( 'Showcase Items', 'post type general name', 'project-portfolio-grid' ),
+		'singular_name'      => _x( 'Showcase Item', 'post type singular name', 'project-portfolio-grid' ),
+		'add_new_item'       => __( 'Add New Showcase Item', 'project-portfolio-grid' ),
+		'edit_item'          => __( 'Edit Showcase Item', 'project-portfolio-grid' ),
+		'new_item'           => __( 'New Showcase Item', 'project-portfolio-grid' ),
+		'view_item'          => __( 'View Showcase Item', 'project-portfolio-grid' ),
+		'search_items'       => __( 'Search Showcase Items', 'project-portfolio-grid' ),
+		'not_found'          => __( 'No showcase items found.', 'project-portfolio-grid' ),
+		'not_found_in_trash' => __( 'No showcase items found in Trash.', 'project-portfolio-grid' ),
+		'menu_name'          => _x( 'Showcase', 'admin menu', 'project-portfolio-grid' ),
 	);
 
 	register_post_type(
@@ -115,7 +115,7 @@ add_action( 'wp_enqueue_scripts', 'hw72_showcase_register_assets' );
 function hw72_showcase_add_meta_box() {
 	add_meta_box(
 		'hw72-showcase-details',
-		__( 'Project details', '72hw-showcase' ),
+		__( 'Project details', 'project-portfolio-grid' ),
 		'hw72_showcase_render_meta_box',
 		'hw72_project',
 		'normal',
@@ -135,13 +135,13 @@ function hw72_showcase_render_meta_box( $post ) {
 	$stack       = get_post_meta( $post->ID, '_hw72_stack', true );
 	?>
 	<p>
-		<label for="hw72-project-url"><strong><?php esc_html_e( 'Project URL', '72hw-showcase' ); ?></strong></label>
+		<label for="hw72-project-url"><strong><?php esc_html_e( 'Project URL', 'project-portfolio-grid' ); ?></strong></label>
 		<input type="url" class="widefat" id="hw72-project-url" name="hw72_project_url" value="<?php echo esc_url( $project_url ); ?>" placeholder="https://example.com/">
 	</p>
 	<p>
-		<label for="hw72-stack"><strong><?php esc_html_e( 'Stack or services', '72hw-showcase' ); ?></strong></label>
+		<label for="hw72-stack"><strong><?php esc_html_e( 'Stack or services', 'project-portfolio-grid' ); ?></strong></label>
 		<input type="text" class="widefat" id="hw72-stack" name="hw72_stack" value="<?php echo esc_attr( $stack ); ?>" maxlength="160">
-		<span class="description"><?php esc_html_e( 'For example: WordPress, PHP, WooCommerce, REST API.', '72hw-showcase' ); ?></span>
+		<span class="description"><?php esc_html_e( 'For example: WordPress, PHP, WooCommerce, REST API.', 'project-portfolio-grid' ); ?></span>
 	</p>
 	<?php
 }
@@ -229,7 +229,7 @@ function hw72_showcase_shortcode( $atts ) {
 		<?php
 	} else {
 		?>
-		<p class="hw72-showcase__empty"><?php esc_html_e( 'Showcase items are being prepared.', '72hw-showcase' ); ?></p>
+		<p class="hw72-showcase__empty"><?php esc_html_e( 'Showcase items are being prepared.', 'project-portfolio-grid' ); ?></p>
 		<?php
 	}
 	wp_reset_postdata();

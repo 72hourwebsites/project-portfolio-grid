@@ -1,4 +1,4 @@
-# 72HW Showcase
+# Project Portfolio Grid
 
 A dependency-free WordPress plugin for a small, honest project portfolio. It registers a **Showcase Item** content type, project URL and stack fields, and the `[hw72_showcase]` shortcode.
 
@@ -22,7 +22,7 @@ The main plugin file contains registration, metadata handling, and rendering. Fr
 Check PHP syntax with:
 
 ```sh
-php -l 72hw-showcase.php
+php -l project-portfolio-grid.php
 ```
 
 The code follows WordPress naming, escaping, nonce, capability, sanitization, and internationalization conventions. Run the official Plugin Check before a WordPress.org submission.
