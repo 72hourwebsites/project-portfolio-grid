@@ -1,5 +1,5 @@
 === Project Portfolio Grid ===
-Contributors: dominiiking
+Contributors: angellopezportfolio2026
 Tags: portfolio, showcase, projects, shortcode
 Requires at least: 6.4
 Tested up to: 7.1
