@@ -3,7 +3,7 @@
  * Plugin Name:       72HW Showcase
  * Plugin URI:        https://github.com/72hourwebsites/72hw-showcase
  * Description:       A small portfolio custom post type with an accessible shortcode grid.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Author:            Angel Lopez
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HW72_SHOWCASE_VERSION', '1.0.0' );
+define( 'HW72_SHOWCASE_VERSION', '1.0.1' );
 define( 'HW72_SHOWCASE_URL', plugin_dir_url( __FILE__ ) );
 
 /**
@@ -48,7 +48,7 @@ function hw72_showcase_register_post_type() {
 			'menu_icon'     => 'dashicons-portfolio',
 			'rewrite'       => array( 'slug' => 'showcase' ),
 			'show_in_rest'  => true,
-			'supports'      => array( 'title', 'editor', 'excerpt', 'thumbnail' ),
+			'supports'      => array( 'title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ),
 		)
 	);
 }

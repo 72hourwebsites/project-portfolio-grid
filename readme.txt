@@ -3,7 +3,7 @@ Contributors: 72hourwebsites
 Tags: portfolio, showcase, projects, shortcode
 Requires at least: 6.4
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ No. Deactivation and uninstallation do not delete project content.
 No. It makes no external API requests and adds no tracking.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fix: the project URL and stack fields now save through the block editor and the REST API (post type declares custom-fields support).
 
 = 1.0.0 =
 * Initial release with Showcase Items, project metadata, and the responsive shortcode grid.
