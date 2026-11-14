@@ -4,7 +4,7 @@ Tags: portfolio, showcase, projects, shortcode
 Requires at least: 6.4
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,9 @@ No. Deactivation and uninstallation do not delete project content.
 No. It makes no external API requests and adds no tracking.
 
 == Changelog ==
+
+= 1.1.1 =
+* The shortcode limit now goes up to 48 items (was 24).
 
 = 1.1.0 =
 * Renamed to Project Portfolio Grid (slug project-portfolio-grid) for the WordPress.org directory. Post type, meta keys and the [hw72_showcase] shortcode are unchanged, so existing items keep working.

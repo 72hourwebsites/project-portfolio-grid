@@ -3,7 +3,7 @@
  * Plugin Name:       Project Portfolio Grid
  * Plugin URI:        https://github.com/72hourwebsites/project-portfolio-grid
  * Description:       A small portfolio custom post type with an accessible shortcode grid.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Requires at least: 6.4
  * Requires PHP:      7.4
  * Author:            Angel Lopez
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HW72_SHOWCASE_VERSION', '1.1.0' );
+define( 'HW72_SHOWCASE_VERSION', '1.1.1' );
 define( 'HW72_SHOWCASE_URL', plugin_dir_url( __FILE__ ) );
 
 /**
@@ -185,7 +185,7 @@ add_action( 'save_post_hw72_project', 'hw72_showcase_save_meta' );
  */
 function hw72_showcase_shortcode( $atts ) {
 	$atts  = shortcode_atts( array( 'limit' => 6 ), $atts, 'hw72_showcase' );
-	$limit = min( 24, max( 1, absint( $atts['limit'] ) ) );
+	$limit = min( 48, max( 1, absint( $atts['limit'] ) ) );
 
 	wp_enqueue_style( 'hw72-showcase' );
 
